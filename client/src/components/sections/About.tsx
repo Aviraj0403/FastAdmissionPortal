@@ -46,7 +46,7 @@ export const About = () => {
               Your Path to Success Since 2015
             </h3>
             <p className="text-gray-600 mb-6">
-              FAST (Future Admission for Successful Tomorrow) has been dedicated to guiding students toward their academic goals since 2015. With a rich history of success and expertise in educational counseling, we've helped over 1700 students secure admissions in their dream institutions.
+              FAST (Future Advice for Successful Tomorrow) has been dedicated to guiding students toward their academic goals since 2015. With a rich history of success and expertise in educational counseling, we've helped over 1700 students secure admissions in their dream institutions.
             </p>
             <p className="text-gray-600 mb-8">
               Our team of experienced counselors specializes in admissions across various disciplines, including Engineering, Medical, Law, and more. We take pride in our strong network of 600+ partner colleges across India, ensuring that our students have access to the best educational opportunities.
