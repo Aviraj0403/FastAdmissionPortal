@@ -26,7 +26,7 @@ export const Footer = () => {
           <div className="space-y-4">
             <h2 className="text-2xl font-bold text-primary">FAST</h2>
             <p className="text-gray-300">
-              Future Admission for Successful Tomorrow - Professional admission counseling since 2015, helping students achieve their dreams.
+              Future Advice for Successful Tomorrow - Professional admission counseling since 2015, helping students achieve their dreams.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-300 hover:text-primary transition-colors">

@@ -30,7 +30,7 @@ export const Hero = () => {
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            <span className="block">Future Admission for</span>
+            <span className="block">Future Advice for</span>
             <span className="block">Successful Tomorrow</span>
           </h1>
           
@@ -57,7 +57,8 @@ export const Hero = () => {
             
             <Button 
               variant="outline" 
-              className="border-white text-white hover:bg-white/10 text-lg px-8 py-6"
+              className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6"
+              // className="border-white text-white hover:bg-white/10 text-lg px-8 py-6"
               onClick={() => {
                 const aboutSection = document.getElementById('about');
                 if (aboutSection) {

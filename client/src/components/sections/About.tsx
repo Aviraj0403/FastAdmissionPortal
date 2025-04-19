@@ -18,7 +18,7 @@ export const About = () => {
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            Future Admission for Successful Tomorrow
+            Future Advice for Successful Tomorrow
           </p>
         </div>
 
