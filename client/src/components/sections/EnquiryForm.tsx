@@ -36,38 +36,66 @@ export const EnquiryForm = () => {
     },
   });
 
-  const onSubmit = (data: FormValues) => {
-    console.log("Form submitted:", data);
+  // const onSubmit = (data: FormValues) => {
+  //   console.log("Form submitted:", data);
     
-    // Using Formspree for form handling
-    fetch("https://formspree.io/f/yourformid", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((response) => {
-        if (response.ok) {
-          toast({
-            title: "Enquiry Submitted Successfully!",
-            description: "We'll get back to you as soon as possible.",
-            variant: "default",
-          });
-          form.reset();
-        } else {
-          throw new Error("Form submission failed");
-        }
-      })
-      .catch((error) => {
-        toast({
-          title: "Submission Failed",
-          description: "Please try again or contact us directly.",
-          variant: "destructive",
-        });
-      });
+  //   // Using Formspree for form handling
+  //   fetch("https://formspree.io/f/yourformid", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify(data),
+  //   })
+  //     .then((response) => {
+  //       if (response.ok) {
+  //         toast({
+  //           title: "Enquiry Submitted Successfully!",
+  //           description: "We'll get back to you as soon as possible.",
+  //           variant: "default",
+  //         });
+  //         form.reset();
+  //       } else {
+  //         throw new Error("Form submission failed");
+  //       }
+  //     })
+  //     .catch((error) => {
+  //       toast({
+  //         title: "Submission Failed",
+  //         description: "Please try again or contact us directly.",
+  //         variant: "destructive",
+  //       });
+  //     });
+  // };
+  const onSubmit = (data: FormValues) => {
+    const { name, email, phone, courseInterest, location, message } = data;
+  
+    const textMessage = `
+  📝 *New Enquiry Received from FastAdmissionPortal!*
+  
+  👤 *Name:* ${name}
+  📧 *Email:* ${email}
+  📱 *Phone:* ${phone}
+  🎓 *Interested In:* ${courseInterest}
+  📍 *Location:* ${location}
+  💬 *Message:* ${message || "No additional message."}
+    `.trim();
+  
+    const encodedMessage = encodeURIComponent(textMessage);
+    const yourWhatsAppNumber = "916200594193"; // Replace with your number (with country code)
+  
+    // Redirect to WhatsApp
+    window.open(`https://wa.me/${yourWhatsAppNumber}?text=${encodedMessage}`, "_blank");
+  
+    // Optional toast
+    toast({
+      title: "Redirecting to WhatsApp...",
+      description: "You will be redirected to WhatsApp to send your enquiry.",
+    });
+  
+    form.reset();
   };
-
+  
   return (
     <section id="enquiry" className="py-20 bg-gradient-to-b from-blue-50 to-white">
       <div className="container mx-auto px-4">
