@@ -67,7 +67,7 @@ export const About = () => {
                 { 
                   icon: <Users className="h-6 w-6 text-primary" />, 
                   title: "Strong Network", 
-                  title: "Strong Network", 
+                  // title: "Strong Network", 
                   desc: "Connections with 600+ colleges nationwide" 
                 },
                 { 
